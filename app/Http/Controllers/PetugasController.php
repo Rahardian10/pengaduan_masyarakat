@@ -16,7 +16,10 @@ class PetugasController extends Controller
     public function home()
     {
         $aduan = Pengaduan::latest()->get();
-        return view('Admin.dashboard', compact('aduan'));
+        $petugas = Petugas::where('level', 'petugas')->get();
+        $tanggapan = Tanggapan::all();
+        $msy = Masyarakat::all();
+        return view('Admin.dashboard', compact('aduan', 'petugas', 'tanggapan', 'msy'));
     }
 
     public function table_petugas()

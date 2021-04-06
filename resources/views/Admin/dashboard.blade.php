@@ -6,26 +6,40 @@
 
 {{-- card --}}
 <div class="row">
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Jumlah Pengaduan</h5>
-    <p class="card-text">{{count($aduan)}}</p>
+  <div class="card border-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Jumlah Pengaduan</div>
+    <div class="card-body text-primary">
+      <p class="card-text">{{count($aduan)}}</p>
+    </div>
   </div>
-</div>
 
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Jumlah Tanggapan</h5>
-    <p class="card-text">{{count($tanggapan)}}</p>
+  <div class="card border-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Jumlah tanggapan</div>
+    <div class="card-body text-primary">
+      <p class="card-text">{{count($tanggapan)}}</p>
+    </div>
   </div>
-</div>
 
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Jumlah Masyarakat</h5>
-    <p class="card-text">{{count($msy)}}</p>
+  <div class="card border-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Jumlah Masyarakat</div>
+    <div class="card-body text-primary">
+      <p class="card-text">{{count($msy)}}</p>
+    </div>
   </div>
-</div>
+
+  <div class="card border-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Admin</div>
+    <div class="card-body text-primary">
+      <p class="card-text">{{count($admin)}}</p>
+    </div>
+  </div>
+
+  <div class="card border-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Jumlah Petugas</div>
+    <div class="card-body text-primary">
+      <p class="card-text">{{count($petugas)}}</p>
+    </div>
+  </div>
 </div>
 
 <br>

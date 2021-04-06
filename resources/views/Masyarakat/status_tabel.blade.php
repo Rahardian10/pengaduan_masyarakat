@@ -85,7 +85,19 @@
           <a href="/" class="btn btn-warning btn-rounded">Kembali</a>
         </div>
       </div>
-  
+      
+      <div class="container">
+        <div class="row" style="padding-left: 12px;">
+        <div class="card border-primary mb-3" style="max-width: 18rem; margin-right: 10px;">
+          <div class="card-header">Jumlah Pengaduan</div>
+          <div class="card-body text-primary">
+            <p class="card-text">{{count($status)}}</p>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
       <div class="container">
   
         <div class="row mt-5">

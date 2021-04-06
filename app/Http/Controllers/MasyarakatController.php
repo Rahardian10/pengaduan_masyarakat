@@ -106,7 +106,7 @@ class MasyarakatController extends Controller
     public function status_tabel($nik)
     {
         $status = Pengaduan::where('nik', $nik)->latest()->get();
-        return view('Masyarakat.status_tabel', ['status' => $status]);
+        return view('Masyarakat.status_tabel', compact('status', 'proses'));
     }
 
     public function detail_pengaduan($id)

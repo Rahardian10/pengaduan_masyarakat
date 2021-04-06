@@ -138,7 +138,11 @@ class PetugasController extends Controller
     public function dashboard()
     {
         $aduan = Pengaduan::latest()->get();
-        return view('Petugas.dashboard', compact('aduan'));
+        $petugas = Petugas::where('level', 'petugas')->get();
+        $admin = Petugas::where('level', 'admin')->get();
+        $tanggapan = Tanggapan::all();
+        $msy = Masyarakat::all();
+        return view('Petugas.dashboard', compact('aduan', 'petugas', 'admin', 'tanggapan', 'msy'));
     }
 
     public function profile_admin()

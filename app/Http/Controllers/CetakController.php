@@ -27,7 +27,7 @@ class CetakController extends Controller
 
     public function cetak_tabel()
     {
-        $cetak = Pengaduan::latest()->get();
+        $cetak = Pengaduan::where('level', 'selesai')->latest()->get();
         return view('Laporan.cetak_tabel', ['cetak' => $cetak]);
     }
 
@@ -44,9 +44,9 @@ class CetakController extends Controller
 
     public function cetak_pdf()
     {
-        $pengaduan = Pengaduan::latest()->get();
+        $pengaduan = Pengaduan::all();
 
-        $pdf = PDF::loadview('Laporan.cetak_pdf', ['pengaduan' => $pengaduan]);
-        return $pdf->download('laporan-pengaduan-pdf');
+        $pdf = PDF::loadview('Laporan.cetak_pdf', compact('pengaduan'));
+        return $pdf->download('codingdriver.pdf');
     }
 }

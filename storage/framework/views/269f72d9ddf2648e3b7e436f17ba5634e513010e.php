@@ -86,8 +86,10 @@
         </div>
       </div>
       
+      
       <div class="container">
         <div class="row" style="padding-left: 12px;">
+
         <div class="card border-primary mb-3" style="max-width: 18rem; margin-right: 10px;">
           <div class="card-header">Jumlah Pengaduan</div>
           <div class="card-body text-primary">
@@ -97,6 +99,7 @@
 
       </div>
       </div>
+      
 
       <div class="container">
   
